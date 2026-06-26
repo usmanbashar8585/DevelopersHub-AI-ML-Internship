@@ -38,3 +38,24 @@ The objective of this task is to fetch historical stock market data, pre-process
 ### 4. Key Results and Findings
 * **Model Fit:** The trained Linear Regression model closely tracks real-market directional trends, matching actual closing shifts with minimal error.
 * **Evaluation:** Evaluated performance metrics using Mean Absolute Error (MAE) and R-squared ($R^2$) to verify statistical accuracy before final model deployment.
+* ---
+
+## Task 3: Heart Disease Prediction (Binary Classification)
+
+### 1. Task Objective
+The objective of this task is to build a machine learning classification system capable of analyzing clinical patient health metrics and predicting whether a individual is at risk of heart disease.
+
+### 2. Dataset Used
+* **Source:** Heart Disease UCI Dataset (retrieved via an online CSV mirror).
+* **Target Variable:** `target` (0 = Healthy / No Risk, 1 = Heart Disease Risk).
+* **Clinical Features Analyzed:** Age, Sex, Chest Pain Type (`cp`), Resting Blood Pressure (`trestbps`), Serum Cholesterol (`chol`), Fasting Blood Sugar (`fbs`), Resting Electrocardiographic Results (`restecg`), Maximum Heart Rate Achieved (`thalach`), Exercise Induced Angina (`exang`), ST depression (`oldpeak`), Slope, Number of Major Vessels (`ca`), and Thal.
+
+### 3. Models Applied
+* **Algorithm:** Logistic Regression (`scikit-learn`), scaled to 1000 iterations to ensure full gradient convergence.
+* **Data Split:** Stratified 80% Training and 20% Testing split to maintain an equal ratio of healthy vs risk cases across both datasets.
+
+### 4. Key Results and Findings
+* **Model Accuracy:** Successfully trained the classifier to separate healthy individuals from risk cases with high overall prediction accuracy.
+* **Error Diagnosis:** Evaluated model errors using a visual Confusion Matrix to measure false positives and false negatives.
+* **ROC-AUC Performance:** Generated a Receiver Operating Characteristic (ROC) curve to confirm structural precision and strong target class separation.
+* **Feature Importance:** Coefficient analysis highlighted attributes like chest pain types (`cp`) and maximum heart rate (`thalach`) as top positive indicators contributing to cardiac risk prediction.
